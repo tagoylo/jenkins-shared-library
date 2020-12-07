@@ -491,6 +491,8 @@ private def install_nebula() {
         sh 'git clone https://github.com/tagoylo/nebula.git'
         dir('nebula')
         {
+            sh 'python3 -m venv env'
+            sh 'source env/bin/activate'
             sh 'pip3 install -r requirements.txt'
             sh 'python3 setup.py install'
         }
