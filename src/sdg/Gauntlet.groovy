@@ -357,9 +357,11 @@ private def check_required_hardware() {
             error(gauntEnv.required_hardware[i] + ' not found in harness. Failing pipeline')
         }
         // Filter out
-        def indx = gauntEnv.boards.indexOf(gauntEnv.required_hardware[i])
-        filtered_board_list.add(gauntEnv.boards[indx])
-        filtered_agent_list.add(gauntEnv.agents[indx])
+        // def indx = gauntEnv.boards.indexOf(gauntEnv.required_hardware[i])
+        //filtered_board_list.add(gauntEnv.boards[indx])
+        //filtered_agent_list.add(gauntEnv.agents[indx])
+        filtered_board_list.add(gauntEnv.boards[i])
+        filtered_agent_list.add(gauntEnv.agents[i])
     }
     // Update to filtered lists
     if (s > 0) {
